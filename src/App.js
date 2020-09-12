@@ -1,25 +1,23 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Header from "./components/header/header.component";
 import HomePage from "./pages/homepage/homepage.page";
-import SignIn from "./pages/sign-in/sign-in.page";
-import SignUp from "./pages/sign-up/sign-up.page";
 import forgotPasswordPage from './pages/forgot-password/forgot-password.page';
+import SignInAndSignUp from "./pages/sign-in-and-sign-up-page/sign-in-and-sign-up-page";
 
+import './App.css';
 
 function App() {
-  return (
-    <div>
-      <Header />
-      <Switch>
-        <Route exact path="/home" component={HomePage} />
-        <Route exact path="/forpass" component={forgotPasswordPage} />
-        <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/" component={SignIn} />
-      </Switch>
-    </div>
-  );
+
+    return (
+      <div>
+         <Switch>
+         <Route path="/home" component={HomePage} />
+         <Route path="/forpass" component={forgotPasswordPage} />
+         <Route  path="/" component={SignInAndSignUp} />
+       </Switch>
+      </div>
+    );
 }
 
 export default App;

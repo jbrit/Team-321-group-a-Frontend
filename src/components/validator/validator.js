@@ -26,6 +26,10 @@ export const validate = values => {
     }else if (Number(values.password.length) < 5) {
       errors.password = 'Password must not be less than 5'
     }
+
+    if(!values.hasAgreed){
+      errors.hasAgreed = 'Required'
+    }
   
     return errors
   }
