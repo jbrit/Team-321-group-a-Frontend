@@ -13,7 +13,7 @@ import {
 
 import { LabelInputField } from "react-semantic-redux-form";
 
-import { validate } from "../validator";
+import { validate } from "../../components/validator/validator";
 
 import './forgot-password.styles.scss';
 
@@ -27,24 +27,21 @@ const ForgotPassword = (props) => {
   return (
     <Grid centered columns={2}>
       <Grid.Column>
+       
+        <Segment style={{marginTop: '100px'}}>
         <Header as="h2" textAlign="center">
          Forgot Password?
         </Header>
-        <Segment>
           <Form size="large" onSubmit={handleSubmit(onSubmit)}>
             <Field
               fluid
               name="email"
               component={LabelInputField}
-              label={{
-                content: <Icon color="blue" name="mail" size="large" />,
-              }}
-              labelPosition="left"
               placeholder="Enter Email Here"
             />
-            <Button color="blue" submitting={submitting} fluid size="large">
-              Recover Password
-            </Button>
+            <div align="center">
+            <button className="FormField__Button mr-20">Recover Password</button>{" "}
+            </div>
           </Form>
         </Segment>
       </Grid.Column>

@@ -1,14 +1,14 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Header from "./components/header/header.component";
 import HomePage from "./pages/homepage/homepage.page";
-import SignIn from "./pages/sign-in/sign-in.page";
-import SignUp from "./pages/sign-up/sign-up.page";
 import forgotPasswordPage from './pages/forgot-password/forgot-password.page';
 
 
+import './App.css';
+
 function App() {
+
   return (
     <div>
       <Header />
@@ -20,6 +20,6 @@ function App() {
       </Switch>
     </div>
   );
-}
+
 
 export default App;
