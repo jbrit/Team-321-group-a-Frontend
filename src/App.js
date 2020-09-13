@@ -3,15 +3,15 @@ import { Switch, Route } from "react-router-dom";
 
 import HomePage from "./pages/homepage/homepage.page";
 import forgotPasswordPage from './pages/forgot-password/forgot-password.page';
+import SignUp from './pages/sign-up/sign-up.page';
+import SignIn from './pages/sign-in/sign-in.page';
 
 
-import './App.css';
-
-function App() {
+export default function App() {
 
   return (
     <div>
-      <Header />
+      
       <Switch>
         <Route exact path="/home" component={HomePage} />
         <Route exact path="/forgotpass" component={forgotPasswordPage} />
@@ -22,4 +22,4 @@ function App() {
   );
 
 
-export default App;
+}

@@ -14,7 +14,7 @@ import {
 
 import { LabelInputField, CheckboxField } from "react-semantic-redux-form";
 
-import { validate } from "../validator";
+import { validate } from "../../components/validator/validator";
 
 import { Link } from "react-router-dom";
 
