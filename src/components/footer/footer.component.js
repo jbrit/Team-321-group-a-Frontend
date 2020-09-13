@@ -29,7 +29,7 @@ const Footer = () => (
           </Grid.Column>
         </Grid.Row>
       </Grid>
-      <Grid Column centered style={{marginTop: '80px'}}>
+      <Grid Column centered style={{marginTop: '40px'}}>
       © 2020 All Rights Reserved
       </Grid>
     </Container>

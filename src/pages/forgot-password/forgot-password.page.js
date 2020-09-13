@@ -15,6 +15,8 @@ import { LabelInputField } from "react-semantic-redux-form";
 
 import { validate } from "../validator";
 
+import './forgot-password.styles.scss';
+
 const ForgotPassword = (props) => {
   const { handleSubmit, submitting } = props;
 

@@ -1,0 +1,32 @@
+.login-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    
+
+    @media screen and (max-width: 800px) {
+        width: 94vw;
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+}
+
+.ui.segment, .ui.segments .segment {
+    margin-top: 150px;
+
+    @media screen and (max-width: 400px) {
+        width: 94vw;
+        
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .ui.checkbox .box, .ui.checkbox label {
+        margin-bottom: 10px;
+    }
+
+    .ui.message { 
+        width: 94vw;
+    }
+}

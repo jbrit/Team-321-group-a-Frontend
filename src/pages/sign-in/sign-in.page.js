@@ -18,6 +18,8 @@ import { validate } from "../validator";
 
 import { Link } from "react-router-dom";
 
+import "./sign-in-page.styles.scss";
+
 const SignIn = (props) => {
   const [error, setError] = useState(null);
 
@@ -25,14 +27,20 @@ const SignIn = (props) => {
 
   const onSubmit = (props) => {
     setError(true);
-    history.push('/home');
+    history.push("/home");
   };
 
   return (
-    <Grid centered columns={2}>
-      <Grid.Column>
+    <div className="login-container">
+      <Grid.Column
+        style={{
+          width: "300px",
+          textAlign: "center",
+          justifyContent: "center",
+        }}
+      >
         <Header as="h2" textAlign="center">
-          Login
+          Sign in to DocBook
         </Header>
         <Segment>
           <Form size="large" onSubmit={handleSubmit(onSubmit)}>
@@ -41,18 +49,20 @@ const SignIn = (props) => {
               name="email"
               component={LabelInputField}
               label={{
-                content: <Icon color="blue" name="mail" size="large" />,
+                content: <Icon color="blue" name="mail" />,
               }}
               labelPosition="left"
               placeholder="Email"
             />
+
+            <Link to="/forgotpass" className="forgot-password">Forgot password?</Link>
             <Field
               fluid
               name="password"
               component={LabelInputField}
               type="password"
               label={{
-                content: <Icon color="blue" name="lock" size="large" />,
+                content: <Icon color="blue" name="lock" />,
               }}
               labelPosition="left"
               placeholder="Password"
@@ -64,23 +74,22 @@ const SignIn = (props) => {
                 label="Stay sign in"
               />
             </Form.Group>
-            <Button color="blue" submitting={submitting} fluid size="large">
+            <Button color="gray" submitting={submitting} fluid size="large">
               Login
             </Button>
-
-            {error ? (
-              <Message>
-                Forgot Password?<Link to="/signup">Sign Up</Link>
-              </Message>
-            ) : (
-              <Message>
-                Not registered yet?<Link to="/signup">Sign Up</Link>
-              </Message>
-            )}
           </Form>
         </Segment>
+        {error ? (
+          <Message>
+            Forgot Password?<Link to="/signup">Sign Up</Link>
+          </Message>
+        ) : (
+          <Message>
+            Not registered yet?<Link to="/signup">Sign Up</Link>
+          </Message>
+        )}
       </Grid.Column>
-    </Grid>
+    </div>
   );
 };
 
