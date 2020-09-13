@@ -1,36 +1,28 @@
-import React, { Component } from 'react';
-import { HashRouter as Router, Route, Link, NavLink } from 'react-router-dom';
-import SignUpForm from './pages/SignUpForm';
-import SignInForm from './pages/SignInForm';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-import './App.css';
+import HomePage from "./pages/homepage/homepage.page";
+import forgotPasswordPage from './pages/forgot-password/forgot-password.page';
+import SignUp from './pages/sign-up/sign-up.page';
+import SignIn from './pages/sign-in/sign-in.page';
+import Footer from "./components/footer/footer.component";
 
-class App extends Component {
-  render() {
-    return (
-      <Router basename="/react-auth-ui/">
-        <div className="App">
-          <div className="App__Aside"></div>
-          <div className="App__Form">
-            <div className="PageSwitcher">
-                <NavLink to="/sign-in" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign In</NavLink>
-                <NavLink exact to="/" activeClassName="PageSwitcher__Item--Active" className="PageSwitcher__Item">Sign Up</NavLink>
-              </div>
 
-              <div className="FormTitle">
-                  <NavLink to="/sign-in" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign In</NavLink> or <NavLink exact to="/" activeClassName="FormTitle__Link--Active" className="FormTitle__Link">Sign Up</NavLink>
-              </div>
+export default function App() {
 
-              <Route exact path="/" component={SignUpForm}>
-              </Route>
-              <Route path="/sign-in" component={SignInForm}>
-              </Route>
-          </div>
+  return (
+    <div>
+      
+      <Switch>
+        <Route exact path="/home" component={HomePage} />
+        <Route exact path="/forgotpass" component={forgotPasswordPage} />
+        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/" component={SignIn} />
+      </Switch>
 
-        </div>
-      </Router>
-    );
-  }
+      <Footer />
+    </div>
+  );
+
+
 }
-
-export default App;
