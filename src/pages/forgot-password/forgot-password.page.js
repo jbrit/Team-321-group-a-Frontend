@@ -2,14 +2,7 @@ import React from "react";
 
 import { Field, reduxForm } from "redux-form";
 
-import {
-  Form,
-  Icon,
-  Button,
-  Grid,
-  Segment,
-  Header,
-} from "semantic-ui-react";
+import { Form, Icon, Button, Grid, Segment, Header } from "semantic-ui-react";
 
 import { LabelInputField } from "react-semantic-redux-form";
 
@@ -33,10 +26,10 @@ const ForgotPassword = (props) => {
           justifyContent: "center",
         }}
       >
-        <Segment style={{marginTop: '100px'}}>
-        <Header as="h2" textAlign="center">
-         Forgot Password?
-        </Header>
+        <Segment style={{ marginTop: "100px" }}>
+          <Header className="forgotpass" as="h2">
+            Forgot Password?
+          </Header>
           <Form size="large" onSubmit={handleSubmit(onSubmit)}>
             <Field
               fluid

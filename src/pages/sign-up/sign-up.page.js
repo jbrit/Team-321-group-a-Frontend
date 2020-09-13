@@ -36,9 +36,8 @@ const SignUp = (props) => {
           justifyContent: "center",
         }}
       >
-        <Header as="h2" textAlign="center">
-        Sign up to DocBook
-        </Header>
+        <Header as="h2">Create a Secure Account</Header>
+        <label>Welcome to the future of Wealth & Health </label>
         <Segment>
           <Form size="large" onSubmit={handleSubmit(onSubmit)}>
             <Field

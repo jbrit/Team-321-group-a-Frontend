@@ -39,9 +39,8 @@ const SignIn = (props) => {
           justifyContent: "center",
         }}
       >
-        <Header as="h2" textAlign="center">
-          Sign in to DocBook
-        </Header>
+        <Header as="h2">Sign in </Header>
+        <label>Securely login to your DocBook </label>
         <Segment>
           <Form size="large" onSubmit={handleSubmit(onSubmit)}>
             <Field
@@ -55,7 +54,9 @@ const SignIn = (props) => {
               placeholder="Email"
             />
 
-            <Link to="/forgotpass" className="forgot-password">Forgot password?</Link>
+            <Link to="/forgotpass" className="forgot-password">
+              Forgot password?
+            </Link>
             <Field
               fluid
               name="password"

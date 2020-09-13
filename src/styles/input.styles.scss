@@ -10,40 +10,51 @@
         margin-right: 10px;
 
     }
-}
 
-.forgot-password {
-    float: right;
-    margin-bottom: 5px;
-    color: #64baf0;
-    font-style: italic;
-}
-
-.ui.header:first-child {
-    margin-top: 2.857143em;
-}
-
-div.ui.segment {
-    margin-top: 2.857143em;
-    ;
-}
-
-@media screen and (max-width: 400px) {
-
-    .ui.checkbox .box,
-    .ui.checkbox label {
-        margin-bottom: 10px;
-    }
-
-    .ui.message {
-        width: 94vw;
-    }
-
-    div.ui.segment {
-        margin-top: 40px;
+    .forgot-password {
+        float: right;
+        margin-bottom: 5px;
+        color: #64baf0;
+        font-style: italic;
     }
 
     .ui.header:first-child {
         margin-top: 2.857143em;
+        margin-bottom: 0;
+    }
+
+    div.ui.segment {
+        margin-top: 2.857143em;
+        ;
+    }
+
+    @media screen and (max-width: 400px) {
+
+        .ui.checkbox .box,
+        .ui.checkbox label {
+            margin-bottom: 10px;
+        }
+
+        .ui.message {
+            width: 84vw;
+        }
+
+        div.ui.segment {
+            margin-top: 40px;
+        }
+
+    }
+
+    .ui.header {
+        color: #2185D0;
+        text-align: center;
+    }
+
+    .ui.header.forgotpass {
+        margin: 10px;
+    }
+
+    label {
+        color: #CACBCD;
     }
 }
