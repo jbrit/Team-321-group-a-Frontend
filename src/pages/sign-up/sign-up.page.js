@@ -18,7 +18,7 @@ import { validate } from "../../components/validator/validator";
 
 import { Link } from "react-router-dom";
 
-import "./sign-up-page.styles.scss";
+import "../../styles/input.styles.scss";
 
 const SignUp = (props) => {
   const { handleSubmit, submitting } = props;
@@ -31,7 +31,7 @@ const SignUp = (props) => {
     <div className="login-container">
       <Grid.Column
         style={{
-          width: "350px",
+          width: "300px",
           textAlign: "center",
           justifyContent: "center",
         }}
@@ -91,7 +91,7 @@ const SignUp = (props) => {
               />
             </Form.Group>
             <Button color="gray" submitting={submitting} fluid size="large">
-              Login
+              Sign up
             </Button>
           </Form>
         </Segment>

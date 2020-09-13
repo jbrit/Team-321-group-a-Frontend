@@ -15,7 +15,7 @@ import { LabelInputField } from "react-semantic-redux-form";
 
 import { validate } from "../../components/validator/validator";
 
-import './forgot-password.styles.scss';
+import "../../styles/input.styles.scss";
 
 const ForgotPassword = (props) => {
   const { handleSubmit, submitting } = props;
@@ -25,9 +25,14 @@ const ForgotPassword = (props) => {
   };
 
   return (
-    <Grid centered columns={2}>
-      <Grid.Column>
-       
+    <div className="login-container">
+      <Grid.Column
+        style={{
+          width: "300px",
+          textAlign: "center",
+          justifyContent: "center",
+        }}
+      >
         <Segment style={{marginTop: '100px'}}>
         <Header as="h2" textAlign="center">
          Forgot Password?
@@ -37,15 +42,19 @@ const ForgotPassword = (props) => {
               fluid
               name="email"
               component={LabelInputField}
+              label={{
+                content: <Icon color="blue" name="mail" />,
+              }}
+              labelPosition="left"
               placeholder="Enter Email Here"
             />
-            <div align="center">
-            <button className="FormField__Button mr-20">Recover Password</button>{" "}
-            </div>
+            <Button color="gray" submitting={submitting} fluid size="large">
+              Recover Password
+            </Button>
           </Form>
         </Segment>
       </Grid.Column>
-    </Grid>
+    </div>
   );
 };
 
